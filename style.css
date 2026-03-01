@@ -1,0 +1,213 @@
+:root {
+    --bg-color: #f4f6f9;
+    --text-color: #1e293b;
+    --card-bg: #ffffff;
+    --primary: #2563eb;
+    --border: #e2e8f0;
+}
+
+body.dark {
+    --bg-color: #0f172a;
+    --text-color: #f1f5f9;
+    --card-bg: #1e293b;
+    --border: #334155;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar h2 {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* CONTAINER */
+
+.container {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* CARDS */
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.card p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* PROGRESS BAR */
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#progressFill {
+    height: 100%;
+    width: 0%;
+    background: var(--primary);
+    transition: width 0.4s ease;
+}
+
+/* BUTTONS */
+
+button, .nav-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover, .nav-btn:hover {
+    background: #1d4ed8;
+    transform: scale(1.03);
+}
+
+.nav-btn {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* TASK PAGE */
+
+.task-container {
+    padding: 50px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.task-input input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+#taskList li {
+    background: var(--card-bg);
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    transition: transform 0.2s ease;
+}
+
+#taskList li:hover {
+    transform: translateX(4px);
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* TIMER */
+
+.timer-container {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.timer-container h1 {
+    font-size: 64px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.timer-buttons button {
+    margin: 8px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--border);
+    background: var(--card-bg);
+    margin-top: 60px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.complete-btn {
+    background: #16a34a;
+}
+
+.complete-btn:hover {
+    background: #15803d;
+}
+
+.delete-btn {
+    background: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+body {
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}

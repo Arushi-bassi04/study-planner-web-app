@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Planner Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<footer>
+    Study Planner Web App
+</footer>
+<body>
+
+    <nav class="navbar">
+        <h2>Study Planner</h2>
+        <div>
+            <button id="themeToggle">Toggle Mode</button>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="card">
+            <h3>Total Tasks</h3>
+            <p id="totalTasks">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Completed Tasks</h3>
+            <p id="completedTasks">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Progress</h3>
+            <div class="progress-bar">
+            <div id="progressFill"></div>
+            </div>
+            <p id="progressPercent">0%</p>
+        </div>
+
+        <div class="navigation">
+            <a href="tasks.html" class="nav-btn">Manage Tasks</a>
+            <a href="pomodoro.html" class="nav-btn">Pomodoro Timer</a>
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

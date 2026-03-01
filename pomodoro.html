@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<footer>
+    Study Planner Web App
+</footer>
+<body>
+
+<nav class="navbar">
+    <h2>Pomodoro Timer</h2>
+    <div>
+        <a href="index.html" class="nav-btn">Dashboard</a>
+    </div>
+</nav>
+
+<div class="timer-container">
+
+    <h1 id="timer">25:00</h1>
+
+    <div class="timer-buttons">
+        <button onclick="startTimer()">Start</button>
+        <button onclick="pauseTimer()">Pause</button>
+        <button onclick="resetTimer()">Reset</button>
+        <button onclick="switchMode()">Switch Mode</button>
+    </div>
+
+    <p id="modeLabel">Mode: Study</p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

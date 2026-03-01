@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<footer>
+    Study Planner Web App
+</footer>
+<body>
+
+<nav class="navbar">
+    <h2>Task Manager</h2>
+    <div>
+        <a href="index.html" class="nav-btn">Dashboard</a>
+    </div>
+</nav>
+
+<div class="task-container">
+
+    <div class="task-input">
+        <input type="text" id="subjectInput" placeholder="Subject">
+        <input type="text" id="taskInput" placeholder="Task">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <div class="filters">
+        <button onclick="filterTasks('all')">All</button>
+        <button onclick="filterTasks('completed')">Completed</button>
+        <button onclick="filterTasks('pending')">Pending</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
